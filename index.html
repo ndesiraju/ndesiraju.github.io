@@ -45,7 +45,7 @@
     box-shadow: var(--card-shadow);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: minmax(200px, 320px) 1fr;
   }
 
   .photo-col{
@@ -303,10 +303,14 @@
     border-bottom: none;
   }
 
-  @media (max-width: 860px){
+  @media (max-width: 760px) and (min-width: 601px){
+    .content-col{ padding: 32px 28px 44px; }
+  }
+
+  @media (max-width: 600px){
     .stage{ padding: 0; }
     .card{ grid-template-columns: 1fr; border-radius: 0; }
-    .photo-col{ position: relative; height: 60vw; max-height: 380px; }
+    .photo-col{ position: relative; aspect-ratio: 16 / 9; max-height: 320px; }
     .content-col{ max-height: none; overflow-y: visible; padding: 32px 22px 48px; }
     .skills-grid{ grid-template-columns: 1fr; }
   }
