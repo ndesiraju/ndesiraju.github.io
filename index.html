@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niharika Desiraju — Resume</title>
+<meta name="description" content="Niharika Desiraju — Relationship-focused healthcare professional bridging data analytics and client engagement.">
+<style>
+  :root{
+    --page-bg: #efeee7;
+    --panel-bg: #f7f3cc;
+    --ink: #24241c;
+    --ink-soft: #55543f;
+    --olive: #767a2b;
+    --olive-dark: #5c5f22;
+    --line: #e2decb;
+    --card-shadow: 0 30px 60px -20px rgba(36,36,28,0.25);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .stage{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 1080px;
+    background: var(--panel-bg);
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+  }
+
+  .photo-col{
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    max-height: 720px;
+    background: #cfcac0;
+  }
+
+  .photo-col img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+    color: #7c7a6c;
+    font-size: 13px;
+    line-height: 1.5;
+    background:
+      repeating-linear-gradient(45deg, #d7d2c6, #d7d2c6 10px, #cfcac0 10px, #cfcac0 20px);
+  }
+
+  .content-col{
+    padding: 40px 48px 56px;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  nav.topnav{
+    text-align: right;
+    margin-bottom: 24px;
+  }
+
+  nav.topnav a{
+    color: var(--olive);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  nav.topnav a:hover{ text-decoration: underline; }
+
+  section{
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section:first-of-type{ padding-top: 0; }
+
+  section:last-of-type{ border-bottom: none; }
+
+  .eyebrow{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--olive-dark);
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+
+  h1{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 0 0 18px;
+    color: var(--ink);
+  }
+
+  h2{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+
+  .lede{
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    max-width: 46ch;
+  }
+
+  .bio{
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 60ch;
+  }
+
+  .btn{
+    display: inline-block;
+    background: #16160f;
+    color: #fdfcf5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 13px 26px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin: 4px 0 22px;
+  }
+
+  .btn:hover{ background: var(--olive-dark); }
+
+  .linkedin{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #d4d68a;
+    color: var(--olive-dark);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  .role{
+    margin-bottom: 28px;
+  }
+
+  .role:last-child{ margin-bottom: 0; }
+
+  .role h3{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 17px;
+    margin: 0 0 2px;
+    color: var(--ink);
+  }
+
+  .role time{
+    display: block;
+    font-size: 12px;
+    color: var(--olive);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .role p{
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 58ch;
+  }
+
+  .skills-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 32px;
+    margin-top: 8px;
+  }
+
+  .skill .stars{
+    color: var(--olive);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .skill h4{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 15px;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+
+  .skill p{
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .project time{
+    display: block;
+    font-size: 12px;
+    color: var(--olive);
+    font-weight: 700;
+    margin: 4px 0 10px;
+  }
+
+  .project h3{
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--olive-dark);
+    margin: 0;
+  }
+
+  .project p{
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin: 0;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    margin-top: 8px;
+  }
+
+  form input,
+  form textarea{
+    background: #e4e18a;
+    border: 1px solid #d1cd6f;
+    border-radius: 3px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  form input::placeholder,
+  form textarea::placeholder{ color: #6b6a3f; }
+
+  form textarea{ min-height: 110px; resize: vertical; }
+
+  form button{
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .form-note{
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: -4px;
+  }
+
+  footer{
+    padding-top: 28px;
+    font-size: 12px;
+    color: var(--olive);
+    border-bottom: none;
+  }
+
+  @media (max-width: 860px){
+    .stage{ padding: 0; }
+    .card{ grid-template-columns: 1fr; border-radius: 0; }
+    .photo-col{ position: relative; height: 60vw; max-height: 380px; }
+    .content-col{ max-height: none; overflow-y: visible; padding: 32px 22px 48px; }
+    .skills-grid{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="card">
+
+    <div class="photo-col">
+      <img src="profile.jpg" alt="Niharika Desiraju">
+    </div>
+
+    <div class="content-col">
+      <nav class="topnav"><a href="#contact">Get in Touch</a></nav>
+
+      <section id="hero">
+        <p class="eyebrow">Relationship-Focused Healthcare Professional | Bridging Data Analytics and Client Engagement</p>
+        <h1>Niharika Desiraju</h1>
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
+        <p class="bio">I'm a Johns Hopkins-trained public health professional (Bachelor of Arts) who works at the intersection of data and relationships. At Montefiore Medicine, I manage 10+ outreach workstreams, operate clinical systems like EPIC, RedCap, and EPaces, and use SQL and Excel to automate part of an eligibility workflow — while building trust with everyone from patients to program leadership along the way. I'm comfortable picking up new tools fast, presenting findings to stakeholders, and I look forward to continuing to grow both my technical and people-facing skills.</p>
+        <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener">in</a>
+      </section>
+
+      <section id="experience">
+        <h2>My Work Experience</h2>
+        <p class="lede">Building trust and driving results across healthcare operations, data, and outreach.</p>
+
+        <div class="role">
+          <h3>Montefiore Medicine (BE-InCK NY), Project Analyst</h3>
+          <time>Aug 2024 – Current</time>
+          <p>Manage 10+ concurrent outreach workstreams at once, tracking status and prioritizing daily across competing deadlines. Support outreach campaigns to hundreds of members per cycle, noting outcomes to keep records accurate and up to date. Operate multiple clinical data systems (EPaces, RedCap, EPIC) and use SQL and Excel to help automate part of an eligibility verification workflow, minimizing manual lookup time. Maintain and categorize a caseload of at-risk patients across three risk levels, applying consistent criteria for accurate outreach and reporting.</p>
+        </div>
+
+        <div class="role">
+          <h3>White Plains Hospital, Marketing &amp; Community Relations Intern</h3>
+          <time>Oct 2022 – Dec 2022</time>
+          <p>Coordinated a community health conference and supported day-to-day operations for the Family Health Center Food Pharmacy, working directly with community partners and stakeholders on a hospital-run outreach program.</p>
+        </div>
+
+        <div class="role">
+          <h3>Innovation Office, IBM Watson, Research Apprentice</h3>
+          <time>Oct 2016 – Jun 2018</time>
+          <p>Designed and scoped HRIDAY, an advanced analytics mobile application use case delivering real-time heart attack alert notifications, as part of a competitive high school science research program — demonstrating early ability to learn new technologies and communicate value to end users.</p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="lede">A blend of technical systems, data tools, and relationship-building skills.</p>
+
+        <div class="skills-grid">
+          <div class="skill">
+            <div class="stars">★</div>
+            <h4>Microsoft Excel</h4>
+            <p>Data tracking, record-keeping, and reporting across outreach campaigns and caseloads.</p>
+          </div>
+          <div class="skill">
+            <div class="stars">★★</div>
+            <h4>SQL</h4>
+            <p>Used SQL to help automate part of an eligibility verification workflow, cutting down manual lookup time.</p>
+          </div>
+          <div class="skill">
+            <div class="stars">★★★</div>
+            <h4>Clinical Data Systems (EPIC, RedCap, EPaces)</h4>
+            <p>Operate multiple clinical data systems daily to track outreach, patient records, and program activity.</p>
+          </div>
+          <div class="skill">
+            <div class="stars">★★★★</div>
+            <h4>Client Outreach &amp; Relationship Building</h4>
+            <p>Comfortable building trust with people ranging from patients to executive stakeholders.</p>
+          </div>
+          <div class="skill">
+            <div class="stars">★★★★★</div>
+            <h4>Data Analysis (Python, SPSS)</h4>
+            <p>Additional experience using Python, Analytics, and SPSS Modeler for data analysis and research. Fast learner.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="lede">Selected work spanning data automation, research, and technology design.</p>
+
+        <div class="project">
+          <h3>HRIDAY — Real-Time Heart Attack Alert App</h3>
+          <time>Oct 2016 – Jun 2018</time>
+          <p>As a Research Apprentice in the Innovation Office at IBM Watson, I designed and scoped HRIDAY, an advanced analytics mobile application delivering real-time heart attack alert notifications, as part of a competitive high school science research program.</p>
+        </div>
+      </section>
+
+      <section id="resume">
+        <h2>My Resume</h2>
+        <p class="lede">For a complete look at my experience, feel free to download a copy of my resume below.</p>
+        <a class="btn" href="resume.pdf" download>Niharika Desiraju Resume</a>
+      </section>
+
+      <section id="contact">
+        <h2>Let's Connect!</h2>
+        <p class="lede">Have an opportunity or question? I'd love to hear from you.</p>
+        <form id="contact-form">
+          <input type="text" id="subject" placeholder="Subject Line" required>
+          <textarea id="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Get In Touch</button>
+        </form>
+        <p class="form-note">This opens your email app with the message pre-filled, addressed to niharika.desiraju@gmail.com.</p>
+      </section>
+
+      <footer>© 2026 Niharika Desiraju</footer>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var subject = encodeURIComponent(document.getElementById('subject').value || 'Hello from your website');
+    var body = encodeURIComponent(document.getElementById('message').value || '');
+    window.location.href = 'mailto:niharika.desiraju@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
