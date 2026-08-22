@@ -322,6 +322,23 @@
     border: 1px solid var(--line);
   }
 
+  .dance-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0 14px;
+    max-width: 480px;
+  }
+
+  .dance-gallery img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+
   .project h3{
     font-family: var(--font-serif);
     font-size: 22px;
@@ -347,6 +364,13 @@
     font-weight: 700;
     font-size: 13.5px;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .inline-arrow{
+    flex-shrink: 0;
   }
 
   .project-cta a:hover{ text-decoration: underline; }
@@ -635,8 +659,13 @@
 
       <section id="hobbies">
         <h2>Outside of Work</h2>
-        <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
-        <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener">View Gallery ↗</a></p>
+        <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her Arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
+        <div class="dance-gallery">
+          <img src="dance-1.jpg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          <img src="dance-2.jpg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          <img src="dance-3.jpg" alt="Niharika performing Bharatanatyam" loading="lazy">
+        </div>
+        <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener">View Art Portfolio <svg class="inline-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
       </section>
 
       <section id="resume">
