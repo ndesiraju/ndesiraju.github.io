@@ -368,7 +368,22 @@
       row-gap: 10px;
     }
     .hero-desc{ font-size: 28px; }
-    .site-nav{ gap: 12px 20px; }
+    .site-nav{
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .site-nav::-webkit-scrollbar{ display: none; }
+    .site-nav a{
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
     .skills-grid{ grid-template-columns: 1fr; }
   }
 </style>
