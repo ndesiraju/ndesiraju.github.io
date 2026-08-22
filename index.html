@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Niharika Desiraju: Resume</title>
 <meta name="description" content="Niharika Desiraju: Relationship-focused healthcare professional bridging data analytics and client engagement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --page-bg: #efeee7;
@@ -15,6 +18,8 @@
     --olive-dark: #5c5f22;
     --line: #e2decb;
     --card-shadow: 0 30px 60px -20px rgba(36,36,28,0.25);
+    --font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   }
 
   *{ box-sizing: border-box; }
@@ -25,7 +30,7 @@
     margin: 0;
     background: var(--page-bg);
     color: var(--ink);
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -47,12 +52,33 @@
     padding: 44px 48px 48px;
   }
 
+  .site-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 28px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav a{
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+
+  .site-nav a:hover{ text-decoration: underline; }
+
   .hero-row{
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-areas:
-      "photo eyebrow"
       "photo name"
+      "photo desc"
+      "photo tagline"
+      "photo cta"
       "photo linkedin"
       "bio bio";
     column-gap: 24px;
@@ -77,17 +103,51 @@
     background: #cfcac0;
   }
 
-  .hero-eyebrow-wrap{ grid-area: eyebrow; }
+  .hero-name-wrap{ grid-area: name; }
 
-  .hero-name-wrap{
-    grid-area: name;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
+  .hero-desc{
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 10px 0 0;
   }
+
+  .hero-desc-wrap{ grid-area: desc; }
+
+  .hero-tagline{
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--olive-dark);
+    font-size: 13px;
+    margin: 18px 0 0;
+  }
+
+  .hero-tagline-wrap{ grid-area: tagline; }
+
+  .hero-cta-wrap{
+    grid-area: cta;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .hero-cta-wrap a{
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .hero-cta-wrap a:hover{ text-decoration: underline; }
 
   .hero-linkedin-wrap{
     grid-area: linkedin;
-    padding-top: 12px;
+    padding-top: 14px;
+    margin-top: 6px;
     border-top: 1px solid var(--line);
   }
 
@@ -104,26 +164,20 @@
 
   section:last-of-type{ border-bottom: none; }
 
-  .eyebrow{
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    color: var(--olive-dark);
-    font-size: 18px;
-    margin: 0 0 8px;
-  }
-
   h1{
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 32px;
-    margin: 0 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0;
     color: var(--ink);
   }
 
   h2{
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 700;
-    font-size: 23px;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 28px;
     margin: 0 0 8px;
     color: var(--ink);
   }
@@ -212,16 +266,18 @@
   }
 
   .skill h4{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    margin: 0 0 4px;
-    color: var(--ink);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+    color: var(--olive-dark);
   }
 
   .skill p{
-    font-size: 13.5px;
+    font-size: 14.5px;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: var(--ink);
     margin: 0;
   }
 
@@ -234,8 +290,9 @@
   }
 
   .project h3{
-    font-size: 15.5px;
-    font-weight: 700;
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 600;
     color: var(--olive-dark);
     margin: 0;
   }
@@ -277,6 +334,19 @@
     margin-top: 4px;
   }
 
+  .resume-cta{
+    margin: 0 0 10px;
+  }
+
+  .resume-cta a{
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+  }
+
+  .resume-cta a:hover{ text-decoration: underline; }
+
   .form-note{
     font-size: 12px;
     color: var(--ink-soft);
@@ -300,13 +370,17 @@
     .hero-row{
       grid-template-columns: 130px 1fr;
       grid-template-areas:
-        "photo eyebrow"
-        "name name"
+        "photo name"
+        "desc desc"
+        "tagline tagline"
+        "cta cta"
         "linkedin linkedin"
         "bio bio";
       column-gap: 16px;
-      row-gap: 12px;
+      row-gap: 10px;
     }
+    .hero-desc{ font-size: 28px; }
+    .site-nav{ gap: 12px 20px; }
     .skills-grid{ grid-template-columns: 1fr; }
   }
 </style>
@@ -316,15 +390,30 @@
 <div class="stage">
   <div class="card">
 
-    <div class="hero-row">
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero-row" id="about">
       <div class="hero-photo">
         <img src="profile.jpg" alt="Niharika Desiraju">
       </div>
-      <div class="hero-eyebrow-wrap">
-        <p class="eyebrow">Relationship-Focused Healthcare Professional | Bridging Data Analytics, AI-Driven Efficiency, and Client Engagement</p>
-      </div>
       <div class="hero-name-wrap">
         <h1>Niharika Desiraju</h1>
+      </div>
+      <div class="hero-desc-wrap">
+        <p class="hero-desc">I turn complex healthcare data into smarter decisions, better systems, and stronger partnerships.</p>
+      </div>
+      <div class="hero-tagline-wrap">
+        <p class="hero-tagline">Healthcare • Data • Growth</p>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="#experience">View My Experience →</a>
+        <a href="resume.pdf" download>Download Resume →</a>
       </div>
       <div class="hero-linkedin-wrap">
         <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -385,24 +474,24 @@
 
         <div class="skills-grid">
           <div class="skill">
-            <h4>Marketing &amp; Design (Canva, PowerPoint, WordPress)</h4>
-            <p>Create visuals, presentations, and web content to support outreach and campaign materials.</p>
+            <h4>Data</h4>
+            <p>SQL · Excel · Python · SPSS · SAS</p>
           </div>
           <div class="skill">
-            <h4>Clinical Data Systems (EPIC, RedCap, EPaces)</h4>
-            <p>Operate multiple clinical data systems to track outreach, patient records, and program activity.</p>
+            <h4>Healthcare Systems</h4>
+            <p>EPIC · REDCap · ePACES</p>
           </div>
           <div class="skill">
-            <h4>AI Tools &amp; Emerging Tech</h4>
-            <p>Stay closely attuned to developments in AI and apply them thoughtfully, streamlining workflows, surfacing insights faster, and augmenting (not replacing) human judgment.</p>
+            <h4>AI &amp; Technology</h4>
+            <p>AI tools · workflow automation · predictive analytics</p>
           </div>
           <div class="skill">
-            <h4>Client Outreach &amp; Relationship Building</h4>
-            <p>Build trust and manage relationships with people ranging from patients to executive stakeholders.</p>
+            <h4>Communication</h4>
+            <p>Stakeholder engagement · presentations · outreach</p>
           </div>
           <div class="skill">
-            <h4>Excel, SQL &amp; Data Analysis (Python, SPSS)</h4>
-            <p>Track, automate, and analyze data across outreach and eligibility workflows, using Excel and SQL for reporting and automation, and Python and SPSS Modeler for deeper analysis and research.</p>
+            <h4>Creative</h4>
+            <p>Canva · PowerPoint · WordPress · content strategy</p>
           </div>
         </div>
       </section>
@@ -425,10 +514,9 @@
       </section>
 
       <section id="resume">
-        <h2>Niharika's Resume</h2>
-        <p class="lede">There's more to the story than what fits on this page. Niharika's full resume rounds things out with leadership experience, from chairing recruitment for a 100+ member organization to training 1,400+ students a year on bystander intervention, plus additional research and content/marketing work. Feel free to grab a copy below.</p>
-        <a class="btn" href="resume.pdf" download>Niharika Desiraju Resume</a>
-        <p class="form-note">This file is password protected. Reach out via the contact form below and Niharika will send you the password.</p>
+        <h2>WANT THE FULL STORY?</h2>
+        <p class="resume-cta"><a href="resume.pdf" download>Download my résumé →</a></p>
+        <p class="form-note">Password protected. Contact me for access.</p>
       </section>
 
       <section id="contact">
