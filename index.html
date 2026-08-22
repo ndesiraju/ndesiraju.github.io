@@ -511,9 +511,26 @@
 
     mix-blend-mode: multiply;
   }
+
+  /* Soft marble texture, sits behind the card in the margins */
+  .bg-marble{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("bg-marble.jpg");
+    background-repeat: repeat;
+    background-size: 380px auto;
+    opacity: 0.16;
+
+    mix-blend-mode: multiply;
+  }
 </style>
 </head>
 <body>
+
+<div class="bg-marble" aria-hidden="true"></div>
 
 <div class="stage">
   <div class="card">
