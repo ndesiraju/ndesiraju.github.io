@@ -51,10 +51,12 @@
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-areas:
-      "photo heading"
+      "photo eyebrow"
+      "photo name"
+      "photo linkedin"
       "bio bio";
     column-gap: 24px;
-    row-gap: 16px;
+    row-gap: 10px;
     align-items: start;
     padding-bottom: 32px;
     border-bottom: 1px solid var(--line);
@@ -75,9 +77,9 @@
     background: #cfcac0;
   }
 
-  .hero-heading{
-    grid-area: heading;
-  }
+  .hero-eyebrow-wrap{ grid-area: eyebrow; }
+  .hero-name-wrap{ grid-area: name; }
+  .hero-linkedin-wrap{ grid-area: linkedin; }
 
   .hero-bio{
     grid-area: bio;
@@ -287,9 +289,14 @@
     .stage{ padding: 0; }
     .card{ border-radius: 0; padding: 24px 16px 40px; }
     .hero-row{
-      grid-template-columns: 220px 1fr;
-      column-gap: 14px;
-      row-gap: 10px;
+      grid-template-columns: 130px 1fr;
+      grid-template-areas:
+        "photo eyebrow"
+        "name name"
+        "linkedin linkedin"
+        "bio bio";
+      column-gap: 16px;
+      row-gap: 12px;
     }
     .skills-grid{ grid-template-columns: 1fr; }
   }
@@ -304,9 +311,13 @@
       <div class="hero-photo">
         <img src="profile.jpg" alt="Niharika Desiraju">
       </div>
-      <div class="hero-heading">
+      <div class="hero-eyebrow-wrap">
         <p class="eyebrow">Relationship-Focused Healthcare Professional | Bridging Data Analytics, AI-Driven Efficiency, and Client Engagement</p>
+      </div>
+      <div class="hero-name-wrap">
         <h1>Niharika Desiraju</h1>
+      </div>
+      <div class="hero-linkedin-wrap">
         <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
