@@ -21,12 +21,12 @@
   :root{
     --page-bg: #efeee7;
     --panel-bg: #f7f3cc;
-    --ink: #24241c;
-    --ink-soft: #55543f;
+    --ink: #1a1a1a;
+    --ink-soft: #5c5c59;
     --olive: #767a2b;
     --olive-dark: #5c5f22;
-    --line: #e2decb;
-    --card-shadow: 0 30px 60px -20px rgba(36,36,28,0.25);
+    --line: rgba(118, 122, 43, 0.12);
+    --card-shadow: 0 30px 60px -20px rgba(26,26,26,0.25);
     --font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
     --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   }
@@ -117,8 +117,8 @@
   .hero-desc{
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: 44px;
-    line-height: 1.15;
+    font-size: 14px;
+    line-height: 1.4;
     color: var(--ink);
     margin: 10px 0 0;
   }
@@ -147,7 +147,7 @@
   }
 
   section{
-    padding: 32px 0;
+    padding: 48px 0;
     border-bottom: 1px solid var(--line);
   }
 
@@ -173,13 +173,12 @@
     color: var(--ink);
   }
 
-  .section-num{
+  .section-num-inline{
     font-family: var(--font-sans);
     font-weight: 700;
-    letter-spacing: 0.08em;
-    font-size: 12px;
-    color: var(--olive);
-    margin: 0 0 6px;
+    letter-spacing: 0.02em;
+    font-size: 20px;
+    color: rgba(118, 122, 43, 0.55);
   }
 
   .hero-marks{
@@ -312,6 +311,17 @@
     margin: 4px 0 10px;
   }
 
+  .project-thumb{
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 14px 0 0;
+    border: 1px solid var(--line);
+  }
+
   .project h3{
     font-family: var(--font-serif);
     font-size: 22px;
@@ -327,6 +337,19 @@
     max-width: 58ch;
     margin: 0;
   }
+
+  .project-cta{
+    margin: 10px 0 0;
+  }
+
+  .project-cta a{
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+  }
+
+  .project-cta a:hover{ text-decoration: underline; }
 
   form{
     display: flex;
@@ -390,6 +413,8 @@
   @media (max-width: 600px){
     .stage{ padding: 0; }
     .card{ border-radius: 0; padding: 24px 16px 40px; }
+    .section-num-inline{ font-size: 16px; }
+    section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; }
     .hero-row{
       grid-template-columns: 130px 1fr;
@@ -412,7 +437,7 @@
       grid-area: linkedin;
       margin-top: 6px;
     }
-    .hero-desc{ font-size: 28px; margin-top: 20px; }
+    .hero-desc{ font-size: 26px; margin-top: 20px; }
     .site-nav{
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -444,6 +469,21 @@
 
     background-image:
       url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
+
+    mix-blend-mode: multiply;
+  }
+
+  /* Barely-visible contour/dot pattern */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+
+    background-image: radial-gradient(circle, rgba(118, 122, 43, 0.5) 1px, transparent 1px);
+    background-size: 26px 26px;
+    opacity: 0.05;
 
     mix-blend-mode: multiply;
   }
@@ -494,15 +534,13 @@
         </a>
       </div>
       <div class="hero-bio">
-        <p class="section-num" style="margin-top: 32px;">01 /</p>
-        <h2>About</h2>
+        <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
         <p class="bio">Niharika is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
       </div>
     </div>
 
     <section id="experience">
-        <p class="section-num">02 /</p>
-        <h2>Experience</h2>
+        <h2><span class="section-num-inline">02 /</span> Experience</h2>
         <p class="lede">Building trust and driving results across healthcare operations, data, and outreach.</p>
 
         <div class="role">
@@ -543,8 +581,7 @@
       </section>
 
       <section id="skills">
-        <p class="section-num">03 /</p>
-        <h2>Skills</h2>
+        <h2><span class="section-num-inline">03 /</span> Skills</h2>
         <p class="lede">A blend of technical systems, data tools, and relationship-building skills.</p>
 
         <div class="skills-grid">
@@ -572,20 +609,27 @@
       </section>
 
       <section id="projects">
-        <p class="section-num">04 /</p>
-        <h2>Selected Work</h2>
+        <h2><span class="section-num-inline">04 /</span> Selected Work</h2>
         <p class="lede">Selected work spanning data automation, research, and technology design.</p>
 
         <div class="project">
-          <h3>HRIDAY: Real-Time Heart Attack Alert App</h3>
+          <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
           <time>Oct 2016 – Jun 2018</time>
           <p>As a Research Apprentice in the Innovation Office at IBM Watson, Niharika designed and scoped HRIDAY, a predictive analytics tool for early cardiac risk detection, delivering real-time heart attack risk alerts as part of a competitive high school science research program.</p>
+          <a href="hriday-poster.pdf" target="_blank" rel="noopener">
+            <img class="project-thumb" src="hriday-thumb.jpg" alt="HRIDAY research poster thumbnail">
+          </a>
+          <p class="project-cta"><a href="hriday-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
         </div>
 
         <div class="project" style="margin-top: 26px;">
-          <h3>Weill Cornell: Friedreich's Ataxia Research</h3>
+          <h3>Weill Cornell Medical College: Friedreich's Ataxia Research</h3>
           <time>May 2016 – Aug 2018</time>
           <p>As a Research Assistant at the Brain &amp; Mind Research Institute, Niharika contributed to published research on Friedreich's Ataxia as part of a competitive high school science research program, assisting with tissue harvesting, nerve fiber preparation for immunohistochemistry, statistical analysis, and qPCR and Western Blotting techniques.</p>
+          <a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">
+            <img class="project-thumb" src="weill-cornell-thumb.jpg" alt="Weill Cornell Friedreich's Ataxia research poster thumbnail">
+          </a>
+          <p class="project-cta"><a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
         </div>
       </section>
 
@@ -596,8 +640,7 @@
       </section>
 
       <section id="contact">
-        <p class="section-num">05 /</p>
-        <h2>Let's Connect!</h2>
+        <h2><span class="section-num-inline">05 /</span> Let's Connect!</h2>
         <p class="lede">Have an opportunity or question? Niharika would love to hear from you.</p>
         <form id="contact-form">
           <input type="text" id="subject" placeholder="Subject Line" required>
