@@ -361,26 +361,37 @@
       grid-template-columns: 130px 1fr;
       grid-template-areas:
         "photo name"
+        "photo linkedin"
         "desc desc"
         "tagline tagline"
         "bio bio";
       column-gap: 16px;
-      row-gap: 10px;
+      row-gap: 8px;
     }
-    .hero-desc{ font-size: 28px; }
+    .hero-name-wrap h1{
+      font-size: 26px;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+    .hero-linkedin-wrap{
+      position: static;
+      grid-area: linkedin;
+      margin-top: 6px;
+    }
+    .hero-desc{ font-size: 28px; margin-top: 20px; }
     .site-nav{
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      gap: 16px;
+      gap: 10px;
       margin-bottom: 20px;
       padding-bottom: 14px;
       scrollbar-width: none;
     }
     .site-nav::-webkit-scrollbar{ display: none; }
     .site-nav a{
-      font-size: 12px;
-      letter-spacing: 0.02em;
+      font-size: 11px;
+      letter-spacing: 0.01em;
       white-space: nowrap;
       flex-shrink: 0;
     }
