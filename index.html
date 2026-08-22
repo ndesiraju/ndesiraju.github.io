@@ -86,8 +86,9 @@
     grid-template-columns: 360px 1fr;
     grid-template-areas:
       "photo name"
-      "photo desc"
-      "photo tagline"
+      "photo linkedin"
+      "tagline tagline"
+      "desc desc"
       "bio bio";
     column-gap: 24px;
     row-gap: 10px;
@@ -137,9 +138,8 @@
   .hero-tagline-wrap{ grid-area: tagline; }
 
   .hero-linkedin-wrap{
-    position: absolute;
-    top: -12px;
-    right: 0;
+    grid-area: linkedin;
+    margin-top: 8px;
   }
 
   .hero-bio{
@@ -398,7 +398,7 @@
       grid-template-columns: 130px 1fr;
       grid-template-areas:
         "photo name"
-        "linkedin linkedin"
+        "photo linkedin"
         "tagline tagline"
         "desc desc"
         "bio bio";
