@@ -72,14 +72,13 @@
   .site-nav a:hover{ text-decoration: underline; }
 
   .hero-row{
+    position: relative;
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-areas:
       "photo name"
       "photo desc"
       "photo tagline"
-      "photo cta"
-      "photo linkedin"
       "bio bio";
     column-gap: 24px;
     row-gap: 10px;
@@ -127,28 +126,10 @@
 
   .hero-tagline-wrap{ grid-area: tagline; }
 
-  .hero-cta-wrap{
-    grid-area: cta;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 4px;
-  }
-
-  .hero-cta-wrap a{
-    color: var(--olive-dark);
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  .hero-cta-wrap a:hover{ text-decoration: underline; }
-
   .hero-linkedin-wrap{
-    grid-area: linkedin;
-    padding-top: 14px;
-    margin-top: 6px;
-    border-top: 1px solid var(--line);
+    position: absolute;
+    top: -12px;
+    right: 0;
   }
 
   .hero-bio{
@@ -373,8 +354,6 @@
         "photo name"
         "desc desc"
         "tagline tagline"
-        "cta cta"
-        "linkedin linkedin"
         "bio bio";
       column-gap: 16px;
       row-gap: 10px;
@@ -393,8 +372,8 @@
     <nav class="site-nav">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -411,10 +390,6 @@
       <div class="hero-tagline-wrap">
         <p class="hero-tagline">Healthcare • Data • Growth</p>
       </div>
-      <div class="hero-cta-wrap">
-        <a href="#experience">View My Experience →</a>
-        <a href="resume.pdf" download>Download Resume →</a>
-      </div>
       <div class="hero-linkedin-wrap">
         <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -428,7 +403,7 @@
     </div>
 
     <section id="experience">
-        <h2>Niharika's Work Experience</h2>
+        <h2>Experience</h2>
         <p class="lede">Building trust and driving results across healthcare operations, data, and outreach.</p>
 
         <div class="role">
