@@ -51,11 +51,10 @@
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-areas:
-      "photo eyebrow"
-      "name name"
+      "photo heading"
       "bio bio";
     column-gap: 24px;
-    row-gap: 12px;
+    row-gap: 16px;
     align-items: start;
     padding-bottom: 32px;
     border-bottom: 1px solid var(--line);
@@ -76,14 +75,8 @@
     background: #cfcac0;
   }
 
-  .hero-eyebrow-wrap{
-    grid-area: eyebrow;
-    display: flex;
-    align-items: center;
-  }
-
-  .hero-name{
-    grid-area: name;
+  .hero-heading{
+    grid-area: heading;
   }
 
   .hero-bio{
@@ -311,17 +304,17 @@
       <div class="hero-photo">
         <img src="profile.jpg" alt="Niharika Desiraju">
       </div>
-      <div class="hero-eyebrow-wrap">
+      <div class="hero-heading">
         <p class="eyebrow">Relationship-Focused Healthcare Professional | Bridging Data Analytics, AI-Driven Efficiency, and Client Engagement</p>
-      </div>
-      <h1 class="hero-name">Niharika Desiraju</h1>
-      <div class="hero-bio">
-        <p class="bio">Niharika is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
+        <h1>Niharika Desiraju</h1>
         <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
           </svg>
         </a>
+      </div>
+      <div class="hero-bio">
+        <p class="bio">Niharika is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
       </div>
     </div>
 
