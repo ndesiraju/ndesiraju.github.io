@@ -467,34 +467,31 @@
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; }
-    .hero-text-block{ display: contents; }
     .hero-row{
       grid-template-columns: 130px 1fr;
       grid-template-areas:
-        "photo name"
-        "photo resumelink"
-        "linkedin linkedin"
-        "tagline tagline"
-        "desc desc"
+        "photo textblock"
         "bio bio";
       column-gap: 16px;
-      row-gap: 8px;
+      row-gap: 24px;
     }
     .hero-resume-link{
-      grid-area: resumelink;
-      margin: 4px 0 0;
+      margin: 6px 0 0;
     }
     .hero-name-wrap h1{
       font-size: 26px;
       letter-spacing: 0.02em;
       line-height: 1.15;
     }
+    .hero-tagline{
+      white-space: normal;
+      font-size: 12px;
+      margin-top: 14px;
+    }
     .hero-linkedin-wrap{
-      position: static;
-      grid-area: linkedin;
       margin-top: 6px;
     }
-    .hero-desc{ font-size: 26px; margin-top: 20px; }
+    .hero-desc{ font-size: 20px; margin: 10px 0 0; }
     .site-nav{
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -572,9 +569,6 @@
           </div>
           <h1>Niharika Desiraju</h1>
         </div>
-        <div class="hero-desc-wrap">
-          <p class="hero-desc">Connecting healthcare data, systems, and people to drive smarter decisions and stronger partnerships.</p>
-        </div>
         <div class="hero-tagline-wrap">
           <p class="hero-tagline">Healthcare • Data • Growth</p>
         </div>
@@ -591,6 +585,9 @@
               </svg>
             </span>
           </a>
+        </div>
+        <div class="hero-desc-wrap">
+          <p class="hero-desc">Connecting healthcare data, systems, and people to drive smarter decisions and stronger partnerships.</p>
         </div>
       </div>
       <div class="hero-bio">
