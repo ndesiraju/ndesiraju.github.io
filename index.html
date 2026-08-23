@@ -145,6 +145,22 @@
     margin-top: 8px;
   }
 
+  .hero-resume-link{
+    margin: 14px 0 0;
+  }
+
+  .hero-resume-link a{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .hero-resume-link a:hover{ text-decoration: underline; }
+
   .hero-bio{
     grid-area: bio;
   }
@@ -449,11 +465,16 @@
       grid-template-areas:
         "photo name"
         "photo linkedin"
+        "resumelink resumelink"
         "tagline tagline"
         "desc desc"
         "bio bio";
       column-gap: 16px;
       row-gap: 8px;
+    }
+    .hero-resume-link{
+      grid-area: resumelink;
+      margin: 4px 0 0;
     }
     .hero-name-wrap h1{
       font-size: 26px;
@@ -562,6 +583,7 @@
             </span>
           </a>
         </div>
+        <p class="hero-resume-link"><a href="#resume">Go to Résumé <svg class="inline-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg></a></p>
       </div>
       <div class="hero-bio">
         <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
