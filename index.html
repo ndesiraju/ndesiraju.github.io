@@ -87,17 +87,18 @@
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-areas:
-      "photo name"
-      "photo tagline"
-      "photo desc"
-      "photo linkedin"
+      "photo textblock"
       "bio bio";
     column-gap: 24px;
-    row-gap: 10px;
+    row-gap: 32px;
     align-items: start;
     padding-bottom: 32px;
     border-bottom: 1px solid var(--line);
     margin-bottom: 32px;
+  }
+
+  .hero-text-block{
+    grid-area: textblock;
   }
 
   .hero-photo{
@@ -119,10 +120,10 @@
   .hero-desc{
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 22px;
     line-height: 1.4;
     color: var(--ink);
-    margin: 10px 0 0;
+    margin: 14px 0 0;
   }
 
   .hero-desc-wrap{ grid-area: desc; }
@@ -132,8 +133,8 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--olive-dark);
-    font-size: 13px;
-    margin: 18px 0 0;
+    font-size: 15px;
+    margin: 20px 0 0;
     white-space: nowrap;
   }
 
@@ -442,6 +443,7 @@
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; }
+    .hero-text-block{ display: contents; }
     .hero-row{
       grid-template-columns: 130px 1fr;
       grid-template-areas:
@@ -532,32 +534,34 @@
       <div class="hero-photo">
         <img src="profile.jpg" alt="Niharika Desiraju">
       </div>
-      <div class="hero-name-wrap">
-        <div class="hero-marks" aria-hidden="true">
-          <span>⊹</span>
-          <span>⊹</span>
-          <span>⊹</span>
+      <div class="hero-text-block">
+        <div class="hero-name-wrap">
+          <div class="hero-marks" aria-hidden="true">
+            <span>⊹</span>
+            <span>⊹</span>
+            <span>⊹</span>
+          </div>
+          <h1>Niharika Desiraju</h1>
         </div>
-        <h1>Niharika Desiraju</h1>
-      </div>
-      <div class="hero-desc-wrap">
-        <p class="hero-desc">Connecting healthcare data, systems, and people to drive smarter decisions and stronger partnerships.</p>
-      </div>
-      <div class="hero-tagline-wrap">
-        <p class="hero-tagline">Healthcare • Data • Growth</p>
-      </div>
-      <div class="hero-linkedin-wrap">
-        <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
-          </svg>
-          <span class="ext-badge" aria-hidden="true">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 17L17 7"/>
-              <path d="M8 7h9v9"/>
+        <div class="hero-desc-wrap">
+          <p class="hero-desc">Connecting healthcare data, systems, and people to drive smarter decisions and stronger partnerships.</p>
+        </div>
+        <div class="hero-tagline-wrap">
+          <p class="hero-tagline">Healthcare • Data • Growth</p>
+        </div>
+        <div class="hero-linkedin-wrap">
+          <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
             </svg>
-          </span>
-        </a>
+            <span class="ext-badge" aria-hidden="true">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17L17 7"/>
+                <path d="M8 7h9v9"/>
+              </svg>
+            </span>
+          </a>
+        </div>
       </div>
       <div class="hero-bio">
         <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
