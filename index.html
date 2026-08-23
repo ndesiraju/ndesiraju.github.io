@@ -85,11 +85,11 @@
   .hero-row{
     position: relative;
     display: grid;
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 340px 1fr;
     grid-template-areas:
       "photo textblock"
       "bio bio";
-    column-gap: 24px;
+    column-gap: 32px;
     row-gap: 32px;
     align-items: start;
     padding-bottom: 32px;
@@ -104,15 +104,19 @@
   .hero-photo{
     grid-area: photo;
     width: 100%;
+    position: relative;
   }
 
   .hero-photo img{
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 14px;
     display: block;
     background: #cfcac0;
+    box-shadow: 0 24px 48px -16px rgba(26, 26, 26, 0.28);
+    position: relative;
+    z-index: 1;
   }
 
   .hero-name-wrap{ grid-area: name; }
@@ -123,7 +127,7 @@
     font-size: 22px;
     line-height: 1.4;
     color: var(--ink);
-    margin: 14px 0 0;
+    margin: 26px 0 26px;
   }
 
   .hero-desc-wrap{ grid-area: desc; }
@@ -134,7 +138,7 @@
     text-transform: uppercase;
     color: var(--olive-dark);
     font-size: 15px;
-    margin: 20px 0 0;
+    margin: 34px 0 0;
     white-space: nowrap;
   }
 
@@ -177,8 +181,8 @@
   h1{
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 32px;
-    letter-spacing: 0.08em;
+    font-size: 38px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin: 0;
     color: var(--ink);
@@ -464,8 +468,8 @@
       grid-template-columns: 130px 1fr;
       grid-template-areas:
         "photo name"
-        "photo linkedin"
-        "resumelink resumelink"
+        "photo resumelink"
+        "linkedin linkedin"
         "tagline tagline"
         "desc desc"
         "bio bio";
@@ -570,6 +574,7 @@
         <div class="hero-tagline-wrap">
           <p class="hero-tagline">Healthcare • Data • Growth</p>
         </div>
+        <p class="hero-resume-link"><a href="#resume">Go to Résumé <svg class="inline-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
         <div class="hero-linkedin-wrap">
           <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -583,7 +588,6 @@
             </span>
           </a>
         </div>
-        <p class="hero-resume-link"><a href="#resume">Go to Résumé <svg class="inline-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg></a></p>
       </div>
       <div class="hero-bio">
         <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
