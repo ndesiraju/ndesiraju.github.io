@@ -469,42 +469,47 @@
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; }
     .hero-row{
-      grid-template-columns: 155px 1fr;
+      grid-template-columns: 110px 1fr;
       grid-template-areas:
-        "photo textblock"
+        "photo name"
+        "photo tagline"
+        "desc desc"
+        "resumelink resumelink"
+        "linkedin linkedin"
         "bio bio";
-      column-gap: 16px;
-      row-gap: 24px;
-      align-items: stretch;
+      column-gap: 14px;
+      row-gap: 10px;
     }
-    .hero-text-block{
-      max-width: 192px;
-    }
+    .hero-text-block{ display: contents; }
     .hero-photo{
-      height: 100%;
+      width: 100%;
+      max-width: none;
+      margin: 0;
     }
     .hero-photo img{
-      height: 100%;
-      aspect-ratio: unset;
-      min-height: 200px;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
     }
     .hero-resume-link{
-      margin: 6px 0 0;
+      grid-area: resumelink;
+      margin: 4px 0 0;
     }
     .hero-name-wrap h1{
-      font-size: 26px;
+      font-size: 22px;
       letter-spacing: 0.02em;
       line-height: 1.15;
     }
     .hero-tagline{
       white-space: normal;
-      font-size: 12px;
-      margin-top: 14px;
+      font-size: 11px;
+      margin-top: 10px;
     }
     .hero-linkedin-wrap{
-      margin-top: 6px;
+      grid-area: linkedin;
+      margin-top: 4px;
     }
-    .hero-desc{ font-size: 20px; margin: 10px 0 0; }
+    .hero-desc{ font-size: 20px; margin: 18px 0 0; }
     .site-nav{
       flex-wrap: nowrap;
       overflow-x: auto;
