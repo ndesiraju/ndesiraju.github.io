@@ -6,11 +6,11 @@
   --forest-dark: #204028;
   --sky: #cfe3ee;
   --sky-light: #f3f8fa;
-  --cream: #faf7f0;
+  --cream: #f5f0e3;
   --ink: #1c2b36;
   --muted: #566878;
-  --white: #ffffff;
-  --line: #e1e8ec;
+  --white: #f5f0e3;
+  --line: #e5dfd0;
   --radius: 10px;
   --font: "Optima", "Optima Nova", "Optima Std", Candara, "Segoe UI", "Century Gothic", "URW Gothic", sans-serif;
   --serif: var(--font);
@@ -118,7 +118,7 @@ p:last-child{ margin-bottom:0; }
 /* ---------- Header ---------- */
 .site-header{
   position: sticky; top:0; z-index: 100;
-  background: rgba(255,255,255,0.94);
+  background: rgba(245,240,227,0.94);
   backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -398,7 +398,7 @@ p:last-child{ margin-bottom:0; }
   .site-nav{
     position:absolute;
     top: 100%; left:0; right:0;
-    background:#fff;
+    background: var(--white);
     border-bottom: 1px solid var(--line);
     flex-direction:column;
     align-items:flex-start;
