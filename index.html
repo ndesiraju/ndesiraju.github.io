@@ -491,16 +491,20 @@
         "bio bio";
       column-gap: 14px;
       row-gap: 10px;
+      align-items: stretch;
     }
     .hero-text-block{ display: contents; }
     .hero-photo{
       width: 100%;
       max-width: none;
       margin: 0;
+      height: 100%;
     }
     .hero-photo img{
       width: 100%;
-      aspect-ratio: 4 / 5;
+      height: 100%;
+      aspect-ratio: unset;
+      min-height: 140px;
       object-fit: cover;
     }
     .hero-resume-link{
