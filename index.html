@@ -72,7 +72,6 @@
     background-size: 170px 305px;
     border-radius: 22px;
     box-shadow: var(--card-shadow);
-    overflow: hidden;
     padding: 22px;
   }
 
@@ -89,8 +88,12 @@
     flex-wrap: wrap;
     gap: 16px 24px;
     margin-bottom: 28px;
-    padding-bottom: 20px;
+    padding: 14px 0 20px;
     border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--panel-bg);
   }
 
   .nav-logo{
@@ -362,7 +365,7 @@
     width: 30px;
     height: 30px;
     border-radius: 6px;
-    background: var(--ink);
+    background: #0a66c2;
     color: #ffffff;
     text-decoration: none;
     font-size: 12px;
@@ -386,7 +389,7 @@
     border-radius: 50%;
   }
 
-  .linkedin:hover{ background: var(--olive-dark); }
+  .linkedin:hover{ background: #004182; }
 
   .role{
     margin-bottom: 28px;
