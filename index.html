@@ -456,6 +456,24 @@
     border: 1px solid var(--line);
   }
 
+  .painting-row{
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .painting-row img{
+    height: 180px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+
   .dance-gallery{
     display: grid;
     grid-template-columns: 1.25fr 1fr;
@@ -580,6 +598,7 @@
   }
 
   @media (max-width: 600px){
+    .painting-row img{ height: 110px; }
     body{ background-size: 220px auto; background-repeat: no-repeat; background-position: center top; }
     .stage{ padding: 5px; }
     .card{ border-radius: 14px; padding: 20px; background-size: 65px 117px; }
@@ -907,11 +926,17 @@
         <h2>Outside of Work</h2>
         <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her Arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
         <div class="dance-gallery">
-          <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
           <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
           <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
         </div>
         <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
+
+        <div class="painting-row">
+          <img src="painting-ratatouille.jpeg" alt="Ratatouille-inspired painting by Niharika" loading="lazy">
+          <img src="painting-elephant.jpeg" alt="Patterned African elephant painting by Niharika" loading="lazy">
+          <img src="painting-nyc.jpeg" alt="NYC skyline painting by Niharika" loading="lazy">
+        </div>
       </section>
 
       <section id="resume">
