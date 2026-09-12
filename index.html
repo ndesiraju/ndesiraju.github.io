@@ -458,17 +458,17 @@
 
   .painting-row{
     display: flex;
-    align-items: flex-end;
-    gap: 16px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 14px;
     margin-top: 20px;
     max-width: 620px;
   }
 
   .painting-row img{
-    height: 220px;
-    width: auto;
-    max-width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     border: 1px solid var(--line);
     display: block;
@@ -605,8 +605,6 @@
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; font-size: 14px; }
-    .painting-row{ gap: 8px; }
-    .painting-row img{ height: 95px; }
     .hero-row{
       grid-template-columns: 110px 1fr;
       grid-template-areas:
