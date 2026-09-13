@@ -471,10 +471,9 @@
   }
 
   .painting-row img{
-    flex: 1 1 0;
-    min-width: 0;
-    width: 100%;
-    height: auto;
+    height: 300px;
+    width: auto;
+    max-width: 100%;
     border-radius: 8px;
     border: 1px solid var(--line);
     display: block;
@@ -611,6 +610,7 @@
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; font-size: 14px; }
+    .painting-row img{ height: 150px; }
     .hero-row{
       grid-template-columns: 110px 1fr;
       grid-template-areas:
@@ -938,7 +938,6 @@
         <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
 
         <div class="painting-row">
-          <img src="painting-ratatouille.jpeg" alt="Ratatouille-inspired painting by Niharika" loading="lazy">
           <img src="painting-nyc.jpeg" alt="NYC skyline painting by Niharika" loading="lazy">
           <img src="painting-elephant.jpeg" alt="Patterned African elephant painting by Niharika" loading="lazy">
         </div>
