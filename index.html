@@ -451,16 +451,86 @@
     margin: 4px 0 10px;
   }
 
+  .project-card{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 26px;
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .project-thumb-link{ display: block; }
+
   .project-thumb{
     display: block;
     width: 100%;
-    max-width: 525px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 8px;
-    margin: 14px 0 0;
+    margin: 0;
     border: 1px solid var(--line);
   }
+
+  .project-tag{
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin: 0 0 8px;
+  }
+
+  .project h3{
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--olive-dark);
+    margin: 0;
+  }
+
+  .project-meta{
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 7px 14px;
+    margin: 16px 0 0;
+  }
+
+  .project-meta dt{
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .project-meta dd{
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .project-cta{
+    margin: 16px 0 0;
+  }
+
+  .project-cta a{
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .inline-arrow{
+    flex-shrink: 0;
+  }
+
+  .project-cta a:hover{ text-decoration: underline; }
 
   .painting-row{
     display: flex;
@@ -506,42 +576,6 @@
     border-radius: 10px;
     aspect-ratio: 1 / 1;
   }
-
-  .project h3{
-    font-family: var(--font-serif);
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--olive-dark);
-    margin: 0;
-  }
-
-  .project p{
-    font-size: 14.5px;
-    line-height: 1.65;
-    color: var(--ink-soft);
-    max-width: none;
-    margin: 0;
-  }
-
-  .project-cta{
-    margin: 10px 0 0;
-  }
-
-  .project-cta a{
-    color: var(--olive-dark);
-    font-weight: 700;
-    font-size: 13.5px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .inline-arrow{
-    flex-shrink: 0;
-  }
-
-  .project-cta a:hover{ text-decoration: underline; }
 
   form{
     display: flex;
@@ -610,6 +644,8 @@
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; font-size: 14px; }
+    .project-card{ grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+    .project-meta{ grid-template-columns: 80px 1fr; }
     .painting-row img{ height: 150px; }
     .hero-row{
       grid-template-columns: 110px 1fr;
@@ -906,24 +942,44 @@
         </div>
         <p class="lede">Selected work spanning data automation, research, and technology design.</p>
 
-        <div class="project">
-          <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
-          <time>Oct 2016 – Jun 2018</time>
-          <p>As a Research Apprentice in the Innovation Office at IBM Watson, Niharika designed and scoped HRIDAY, a predictive analytics tool for early cardiac risk detection, delivering real-time heart attack risk alerts as part of a competitive high school science research program.</p>
-          <a href="hriday-poster.pdf" target="_blank" rel="noopener">
+        <div class="project-card">
+          <a class="project-thumb-link" href="hriday-poster.pdf" target="_blank" rel="noopener">
             <img class="project-thumb" src="hriday-thumb.jpeg" alt="HRIDAY research poster thumbnail">
           </a>
-          <p class="project-cta"><a href="hriday-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
+          <div class="project-body">
+            <p class="project-tag">Predictive Analytics · Healthcare · AI</p>
+            <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
+            <time>Oct 2016 – Jun 2018</time>
+            <dl class="project-meta">
+              <dt>The problem</dt>
+              <dd>Detect cardiac risk earlier</dd>
+              <dt>My role</dt>
+              <dd>Designed the predictive analytics use case</dd>
+              <dt>Outcome</dt>
+              <dd>Real-time risk alerts</dd>
+            </dl>
+            <p class="project-cta"><a href="hriday-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
+          </div>
         </div>
 
-        <div class="project" style="margin-top: 26px;">
-          <h3>Weill Cornell Medical College: Friedreich's Ataxia Research</h3>
-          <time>May 2016 – Aug 2018</time>
-          <p>As a Research Assistant at the Brain &amp; Mind Research Institute, Niharika contributed to published research on Friedreich's Ataxia as part of a competitive high school science research program, assisting with tissue harvesting, nerve fiber preparation for immunohistochemistry, statistical analysis, and qPCR and Western Blotting techniques.</p>
-          <a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">
+        <div class="project-card" style="margin-top: 22px;">
+          <a class="project-thumb-link" href="weill-cornell-poster.pdf" target="_blank" rel="noopener">
             <img class="project-thumb" src="weill-cornell-thumb.jpeg" alt="Weill Cornell Friedreich's Ataxia research poster thumbnail">
           </a>
-          <p class="project-cta"><a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
+          <div class="project-body">
+            <p class="project-tag">Neuroscience · Lab Research · Rare Disease</p>
+            <h3>Weill Cornell Medical College: Friedreich's Ataxia Research</h3>
+            <time>May 2016 – Aug 2018</time>
+            <dl class="project-meta">
+              <dt>The problem</dt>
+              <dd>Understand nerve fiber degeneration in Friedreich's Ataxia</dd>
+              <dt>My role</dt>
+              <dd>Assisted tissue harvesting, nerve fiber prep, and qPCR/Western blot analysis</dd>
+              <dt>Outcome</dt>
+              <dd>Contributed to published research findings</dd>
+            </dl>
+            <p class="project-cta"><a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
+          </div>
         </div>
       </section>
 
