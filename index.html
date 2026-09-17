@@ -158,14 +158,13 @@
     position: relative;
     display: grid;
     grid-template-columns: 255px 1fr;
-    grid-template-areas:
-      "photo textblock"
-      "bio bio";
+    grid-template-areas: "photo textblock";
     column-gap: 33px;
-    row-gap: 24px;
     align-items: stretch;
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--line);
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px;
     margin-bottom: 32px;
   }
 
@@ -257,7 +256,7 @@
   }
 
   .hero-bio{
-    grid-area: bio;
+    margin-bottom: 8px;
   }
 
   section{
@@ -338,6 +337,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    margin-bottom: 18px;
   }
 
   .contact-actions .btn{
@@ -404,6 +404,14 @@
   }
 
   .linkedin:hover{ background: #004182; }
+
+  .media-card{
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px;
+    margin-top: 8px;
+  }
 
   .role{
     background: var(--page-bg);
@@ -641,7 +649,7 @@
   .form-note{
     font-size: 12px;
     color: var(--ink-soft);
-    margin-top: -4px;
+    margin-top: 14px;
   }
 
   footer{
@@ -664,6 +672,7 @@
     section{ padding: 36px 0; }
     .hero-marks{ gap: 14px; margin-bottom: 8px; font-size: 14px; }
     .project-card{ grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+    .media-card{ padding: 16px; }
     .role{ padding: 16px 18px; margin-bottom: 14px; }
     .project-meta{ grid-template-columns: 80px 1fr; }
     .painting-row img{ height: 150px; }
@@ -673,11 +682,12 @@
         "photo name"
         "photo tagline"
         "desc desc"
-        "actions actions"
-        "bio bio";
+        "actions actions";
       column-gap: 14px;
       row-gap: 10px;
       align-items: stretch;
+      padding: 16px;
+      border-radius: 12px;
     }
     .hero-text-block{ display: contents; }
     .hero-photo{
@@ -863,15 +873,16 @@
         </div>
         </div>
       </div>
-      <div class="hero-bio">
-        <div class="section-head" style="margin-top: 32px;">
-          <div>
-            <h2><span class="section-num-inline">01 /</span> About</h2>
-            <div class="section-accent-line" aria-hidden="true"></div>
-          </div>
+    </div>
+
+    <div class="hero-bio">
+      <div class="section-head">
+        <div>
+          <h2><span class="section-num-inline">01 /</span> About</h2>
+          <div class="section-accent-line" aria-hidden="true"></div>
         </div>
-        <p class="bio">Niharika (nee-ha-ree-kah) is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
       </div>
+      <p class="bio">Niharika (nee-ha-ree-kah) is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
     </div>
 
     <section id="experience">
@@ -1006,16 +1017,17 @@
       <section id="hobbies">
         <h2>Outside of Work</h2>
         <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her Arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
-        <div class="dance-gallery">
-          <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-          <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-          <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-        </div>
-        <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
-
-        <div class="painting-row">
-          <img src="painting-nyc.jpeg" alt="NYC skyline painting by Niharika" loading="lazy">
-          <img src="painting-elephant.jpeg" alt="Patterned African elephant painting by Niharika" loading="lazy">
+        <div class="media-card">
+          <div class="dance-gallery">
+            <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+            <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+            <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          </div>
+          <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
+          <div class="painting-row">
+            <img src="painting-nyc.jpeg" alt="NYC skyline painting by Niharika" loading="lazy">
+            <img src="painting-elephant.jpeg" alt="Patterned African elephant painting by Niharika" loading="lazy">
+          </div>
         </div>
       </section>
 
@@ -1033,6 +1045,7 @@
           </div>
         </div>
         <p class="lede">Have an opportunity or question? Niharika would love to hear from you.</p>
+        <div class="media-card">
         <form id="contact-form">
           <input type="text" id="subject" placeholder="Subject Line" required>
           <textarea id="message" placeholder="Message" required></textarea>
@@ -1051,6 +1064,7 @@
             </a>
           </div>
         </form>
+        </div>
         <p class="form-note">This opens your email app with the message pre-filled, sent to her email.</p>
       </section>
 
