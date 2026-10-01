@@ -240,7 +240,13 @@
     font-size: 15px;
     color: var(--ink-soft);
     margin: 0 0 24px;
-    max-width: 68ch;
+    max-width: 62ch;
+  }
+
+  @media (min-width: 700px){
+    .lede{
+      max-width: none;
+    }
   }
 
   .bio{
@@ -476,8 +482,8 @@
 
   form input,
   form textarea{
-    background: #e4e18a;
-    border: 1px solid #d1cd6f;
+    background: #eae6cd;
+    border: 1px solid rgba(118,122,43,0.35);
     border-radius: 3px;
     padding: 12px 14px;
     font-family: inherit;
@@ -486,7 +492,7 @@
   }
 
   form input::placeholder,
-  form textarea::placeholder{ color: #6b6a3f; }
+  form textarea::placeholder{ color: var(--ink-soft); }
 
   form textarea{ min-height: 110px; resize: vertical; }
 
