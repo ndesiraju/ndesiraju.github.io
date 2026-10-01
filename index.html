@@ -21,21 +21,19 @@
 <meta name="twitter:image" content="https://niharikadesiraju.com/profile.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --page-bg: #f2ecd2;
-    --panel-bg: #faf6ea;
+    --page-bg: #e4e1d0;
+    --panel-bg: #eeeee6;
     --ink: #1a1a1a;
     --ink-soft: #5c5c59;
     --olive: #767a2b;
     --olive-dark: #5c5f22;
-    --rose: #c67b76;
-    --rose-dark: #a35f5a;
     --line: rgba(118, 122, 43, 0.12);
     --card-shadow: 0 30px 60px -20px rgba(26,26,26,0.25);
-    --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
-    --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   }
 
   *{ box-sizing: border-box; }
@@ -45,10 +43,10 @@
   body{
     margin: 0;
     background-color: var(--page-bg);
-    background-image: url("bg-ogee-tulip.jpeg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 340px auto;
+    background-image: url("bg-sprig.jpeg");
+    background-repeat: repeat;
+    background-size: 220px auto;
+    background-blend-mode: multiply;
     color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -61,90 +59,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
+    padding: 48px 24px;
   }
 
   .card{
     width: 100%;
-    max-width: 1400px;
-    background-color: var(--page-bg);
-    background-image: url("bg-ogee-tulip.jpeg");
-    background-repeat: repeat;
-    background-size: 110px 198px;
-    border-radius: 22px;
-    box-shadow: var(--card-shadow);
-    padding: 54px;
-  }
-
-  .card-inner{
+    max-width: 1080px;
     background: var(--panel-bg);
-    border-radius: 14px;
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
     padding: 44px 48px 48px;
-    position: relative;
   }
 
   .site-nav{
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 16px 24px;
+    gap: 20px 28px;
     margin-bottom: 28px;
-    padding: 14px 0 20px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--line);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: var(--panel-bg);
   }
 
-  .nav-logo{
-    font-family: var(--font-serif);
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-    margin-right: auto;
-  }
-
-  .nav-logo-short{ display: none; }
-
-  .nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 24px;
-  }
-
-  .btn-pill{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    padding: 11px 24px;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
-
-  .btn-pill-olive{
-    background: var(--olive-dark);
-    color: #fdfcf5;
-  }
-
-  .btn-pill-olive:hover{ background: var(--olive); }
-
-  .btn-pill-rose{
-    background: var(--rose);
-    color: #fdfcf5;
-  }
-
-  .btn-pill-rose:hover{ background: var(--rose-dark); }
-
-  .nav-links a{
+  .site-nav a{
     color: var(--olive-dark);
     font-weight: 700;
     font-size: 13px;
@@ -152,29 +89,25 @@
     text-decoration: none;
   }
 
-  .nav-links a:hover{ text-decoration: underline; }
+  .site-nav a:hover{ text-decoration: underline; }
 
   .hero-row{
     position: relative;
     display: grid;
-    grid-template-columns: 255px 1fr;
-    grid-template-areas: "photo textblock";
-    column-gap: 33px;
-    align-items: stretch;
-    background: var(--page-bg);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 28px;
+    grid-template-columns: 340px 1fr;
+    grid-template-areas:
+      "photo textblock"
+      "bio bio";
+    column-gap: 32px;
+    row-gap: 32px;
+    align-items: start;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
     margin-bottom: 32px;
   }
 
   .hero-text-block{
     grid-area: textblock;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 22px;
-    height: 100%;
   }
 
   .hero-photo{
@@ -200,10 +133,10 @@
   .hero-desc{
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: 19px;
-    line-height: 1.45;
+    font-size: 22px;
+    line-height: 1.4;
     color: var(--ink);
-    margin: 0;
+    margin: 26px 0 26px;
   }
 
   .hero-desc-wrap{ grid-area: desc; }
@@ -213,50 +146,48 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--olive-dark);
-    font-size: 19px;
-    margin: 0;
+    font-size: 15px;
+    margin: 34px 0 0;
     white-space: nowrap;
   }
 
   .hero-location{
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     font-weight: 700;
     letter-spacing: 0.04em;
     color: var(--ink-soft);
-    font-size: 13px;
-    margin: 6px 0 0;
+    font-size: 12px;
+    margin: 8px 0 0;
   }
 
   .hero-tagline-wrap{ grid-area: tagline; }
 
-  .hero-accent-line{
-    width: 44px;
-    height: 3px;
-    background: var(--rose);
-    border-radius: 2px;
-    margin-top: 14px;
-  }
-
-  .hero-location svg{ width: 14px; height: 14px; }
-
-  .hero-actions{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
   .hero-linkedin-wrap{
-    margin-top: 0;
+    grid-area: linkedin;
+    margin-top: 8px;
   }
 
   .hero-resume-link{
-    margin: 0;
+    grid-area: resumelink;
+    margin: 14px 0 0;
   }
 
+  .hero-resume-link a{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--olive-dark);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .hero-resume-link a:hover{ text-decoration: underline; }
+
   .hero-bio{
-    margin-bottom: 8px;
+    grid-area: bio;
   }
 
   section{
@@ -269,10 +200,10 @@
   section:last-of-type{ border-bottom: none; }
 
   h1{
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 33px;
-    letter-spacing: 0.05em;
+    font-size: 38px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin: 0;
     color: var(--ink);
@@ -282,25 +213,8 @@
     font-family: var(--font-serif);
     font-weight: 600;
     font-size: 28px;
-    margin: 0;
+    margin: 0 0 8px;
     color: var(--ink);
-  }
-
-  .section-head{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px 24px;
-    margin-bottom: 8px;
-  }
-
-  .section-accent-line{
-    width: 44px;
-    height: 3px;
-    background: var(--rose);
-    border-radius: 2px;
-    margin-top: 10px;
   }
 
   .section-num-inline{
@@ -313,7 +227,7 @@
 
   .hero-marks{
     display: flex;
-    gap: 16px;
+    gap: 18px;
     color: var(--olive);
     font-size: 14px;
     margin-bottom: 10px;
@@ -323,48 +237,25 @@
     font-size: 15px;
     color: var(--ink-soft);
     margin: 0 0 24px;
-    max-width: none;
-    text-wrap: pretty;
+    max-width: 46ch;
   }
 
   .bio{
     font-size: 15px;
     line-height: 1.7;
     color: var(--ink);
-    margin: 0;
-  }
-
-  .contact-actions{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-
-  .contact-actions .btn{
-    height: 48px;
-    display: inline-flex;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 4px 0 0;
-  }
-
-  .contact-actions .linkedin{
-    margin-top: 0;
-    width: 48px;
-    height: 48px;
   }
 
   .btn{
     display: inline-block;
-    background: var(--ink);
+    background: #16160f;
     color: #fdfcf5;
     text-decoration: none;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.02em;
-    padding: 13px 28px;
-    border-radius: 999px;
+    padding: 13px 26px;
+    border-radius: 3px;
     border: none;
     cursor: pointer;
     margin: 4px 0 22px;
@@ -377,25 +268,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
     background: #0a66c2;
     color: #ffffff;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
-    margin-top: 3px;
+    margin-top: 4px;
   }
-
-  .linkedin svg{ width: 15px; height: 15px; }
 
   .ext-badge{
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 12px;
-    height: 12px;
+    top: -7px;
+    right: -7px;
+    width: 16px;
+    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,29 +295,16 @@
 
   .linkedin:hover{ background: #004182; }
 
-  .media-card{
-    background: var(--page-bg);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 34px;
-    margin-top: 8px;
-  }
-
   .role{
-    background: var(--page-bg);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 22px 24px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
   }
 
   .role:last-child{ margin-bottom: 0; }
 
   .role h3{
-    font-family: var(--font-serif);
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 4px;
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 0 0 2px;
     color: var(--ink);
   }
 
@@ -437,29 +313,22 @@
     font-size: 12px;
     color: var(--olive);
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .role p{
     font-size: 14.5px;
     line-height: 1.65;
-    color: var(--ink);
+    color: var(--ink-soft);
     margin: 0;
-    max-width: none;
+    max-width: 58ch;
   }
 
   .skills-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 26px 32px;
     margin-top: 8px;
-  }
-
-  .skill{
-    background: var(--page-bg);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 18px 20px;
   }
 
   .skill h4{
@@ -486,36 +355,32 @@
     margin: 4px 0 10px;
   }
 
-  .project-card{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 26px;
-    background: var(--page-bg);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 24px;
-  }
-
-  .project-thumb-link{ display: block; }
-
   .project-thumb{
     display: block;
     width: 100%;
+    max-width: 420px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 8px;
-    margin: 0;
+    margin: 14px 0 0;
     border: 1px solid var(--line);
   }
 
-  .project-tag{
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--olive);
-    margin: 0 0 8px;
+  .dance-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0 14px;
+    max-width: 480px;
+  }
+
+  .dance-gallery img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    display: block;
   }
 
   .project h3{
@@ -526,29 +391,16 @@
     margin: 0;
   }
 
-  .project-meta{
-    display: grid;
-    grid-template-columns: 92px 1fr;
-    gap: 7px 14px;
-    margin: 16px 0 0;
-  }
-
-  .project-meta dt{
-    font-weight: 700;
-    font-size: 12.5px;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  .project-meta dd{
-    font-size: 13.5px;
-    line-height: 1.5;
+  .project p{
+    font-size: 14.5px;
+    line-height: 1.65;
     color: var(--ink-soft);
+    max-width: 58ch;
     margin: 0;
   }
 
   .project-cta{
-    margin: 16px 0 0;
+    margin: 10px 0 0;
   }
 
   .project-cta a{
@@ -567,51 +419,6 @@
 
   .project-cta a:hover{ text-decoration: underline; }
 
-  .painting-row{
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-top: 20px;
-    max-width: 620px;
-  }
-
-  .painting-row img{
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    border-radius: 8px;
-    border: 1px solid var(--line);
-    display: block;
-  }
-
-  .dance-gallery{
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 14px;
-    margin: 18px 0 14px;
-    max-width: 620px;
-  }
-
-  .dance-gallery img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border: 1px solid var(--line);
-  }
-
-  .dance-gallery img:nth-child(1){
-    grid-row: 1 / 3;
-    border-radius: 160px 160px 10px 10px;
-  }
-
-  .dance-gallery img:nth-child(2),
-  .dance-gallery img:nth-child(3){
-    border-radius: 10px;
-    aspect-ratio: 1 / 1;
-  }
-
   form{
     display: flex;
     flex-direction: column;
@@ -622,7 +429,7 @@
 
   form input,
   form textarea{
-    background: #eae2c4;
+    background: #e4e18a;
     border: 1px solid #d1cd6f;
     border-radius: 3px;
     padding: 12px 14px;
@@ -645,8 +452,6 @@
     margin: 0 0 10px;
   }
 
-  #resume h2{ margin-bottom: 14px; }
-
   .resume-cta a{
     color: var(--olive-dark);
     font-weight: 700;
@@ -659,7 +464,7 @@
   .form-note{
     font-size: 12px;
     color: var(--ink-soft);
-    margin-top: 14px;
+    margin-top: -4px;
   }
 
   footer{
@@ -670,35 +475,28 @@
   }
 
   @media (max-width: 760px) and (min-width: 601px){
-    .card-inner{ padding: 36px 28px 44px; }
+    .card{ padding: 36px 28px 44px; }
   }
 
   @media (max-width: 600px){
-    body{ background-size: 220px auto; background-repeat: no-repeat; background-position: center top; }
-    .stage{ padding: 5px; }
-    .card{ border-radius: 14px; padding: 20px; background-size: 65px 117px; }
-    .card-inner{ border-radius: 10px; padding: 24px 16px 40px; }
+    body{ background-size: 70px auto; }
+    .stage{ padding: 10px; }
+    .card{ border-radius: 12px; padding: 24px 16px 40px; }
     .section-num-inline{ font-size: 16px; }
     section{ padding: 36px 0; }
-    .hero-marks{ gap: 14px; margin-bottom: 8px; font-size: 14px; }
-    .project-card{ grid-template-columns: 1fr; gap: 16px; padding: 18px; }
-    .media-card{ padding: 20px; }
-    .role{ padding: 16px 18px; margin-bottom: 14px; }
-    .project-meta{ grid-template-columns: 80px 1fr; }
-    .painting-row{ flex-wrap: wrap; }
-    .painting-row img{ height: 115px; }
+    .hero-marks{ gap: 14px; margin-bottom: 8px; }
     .hero-row{
       grid-template-columns: 110px 1fr;
       grid-template-areas:
         "photo name"
         "photo tagline"
         "desc desc"
-        "actions actions";
+        "resumelink resumelink"
+        "linkedin linkedin"
+        "bio bio";
       column-gap: 14px;
       row-gap: 10px;
       align-items: stretch;
-      padding: 16px;
-      border-radius: 12px;
     }
     .hero-text-block{ display: contents; }
     .hero-photo{
@@ -714,17 +512,10 @@
       min-height: 140px;
       object-fit: cover;
     }
-    .hero-actions{
-      grid-area: actions;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 4px;
-    }
     .hero-resume-link{
-      margin: 0;
+      grid-area: resumelink;
+      margin: 4px 0 0;
     }
-    .hero-resume-link a{ font-size: 15px; padding: 10px 20px; }
     .hero-name-wrap h1{
       font-size: 28px;
       letter-spacing: 0.02em;
@@ -733,57 +524,29 @@
     .hero-tagline{
       white-space: normal;
       font-size: 11px;
-      letter-spacing: 0.03em;
       margin-top: 10px;
     }
-    .hero-location{
-      font-size: 12.6px;
-      gap: 5px;
-      margin-top: 8px;
-    }
-    .hero-location svg{ width: 12px; height: 12px; }
     .hero-linkedin-wrap{
-      margin-top: 0;
-    }
-    .linkedin{
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      font-size: 16px;
+      grid-area: linkedin;
       margin-top: 4px;
     }
-    .linkedin svg{ width: 20px; height: 20px; }
-    .ext-badge{
-      top: -7px;
-      right: -7px;
-      width: 16px;
-      height: 16px;
-    }
-    .hero-desc{ font-size: 18px; margin: 18px 0 0; }
+    .hero-desc{ font-size: 20px; margin: 18px 0 0; }
     .site-nav{
-      flex-wrap: nowrap;
-      gap: 12px;
-      margin-bottom: 20px;
-      padding: 12px 0;
-    }
-    .nav-logo{ display: none; }
-    .site-nav .btn-pill-rose{ display: none; }
-    .nav-links{
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       gap: 11px;
+      margin-bottom: 20px;
+      padding: 14px 0;
       scrollbar-width: none;
-      flex: 1 1 auto;
     }
-    .nav-links::-webkit-scrollbar{ display: none; }
-    .nav-links a{
-      font-size: 11px;
+    .site-nav::-webkit-scrollbar{ display: none; }
+    .site-nav a{
+      font-size: 12px;
       letter-spacing: 0;
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .btn-pill{ font-size: 12px; padding: 9px 18px; }
     .skills-grid{ grid-template-columns: 1fr; }
   }
 
@@ -823,19 +586,14 @@
 
 <div class="stage">
   <div class="card">
-  <div class="card-inner">
 
     <nav class="site-nav">
-      <a class="nav-logo" href="#about"><span class="nav-logo-full">Niharika Desiraju</span><span class="nav-logo-short">ND</span></a>
-      <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Work</a>
       <a href="resume.html">Résumé</a>
       <a href="#contact">Contact</a>
-      </div>
-      <a class="btn-pill btn-pill-rose" href="mailto:niharika.desiraju@gmail.com">Let's Connect</a>
     </nav>
 
     <div class="hero-row" id="about">
@@ -848,13 +606,11 @@
             <span>⊹</span>
             <span>⊹</span>
             <span>⊹</span>
-            <span>⊹</span>
-            <span>⊹</span>
           </div>
           <h1>Niharika Desiraju</h1>
         </div>
         <div class="hero-tagline-wrap">
-          <p class="hero-tagline">Healthcare • Data • Growth</p>
+          <p class="hero-tagline">Connector • Data • Growth</p>
           <p class="hero-location">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/>
@@ -862,13 +618,11 @@
             </svg>
             NYC
           </p>
-          <div class="hero-accent-line" aria-hidden="true"></div>
         </div>
         <div class="hero-desc-wrap">
-          <p class="hero-desc">Connecting healthcare data, systems, and people to drive smarter decisions and stronger partnerships.</p>
+          <p class="hero-desc">A cross-cultural communicator with a data-driven edge, turning people, systems, and numbers into smarter decisions and stronger partnerships.</p>
         </div>
-        <div class="hero-actions">
-        <p class="hero-resume-link"><a class="btn-pill btn-pill-olive" href="resume.html">Go to Résumé <svg class="inline-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
+        <p class="hero-resume-link"><a href="resume.html">Go to Résumé <svg class="inline-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
         <div class="hero-linkedin-wrap">
           <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -882,41 +636,27 @@
             </span>
           </a>
         </div>
-        </div>
       </div>
-    </div>
-
-    <div class="hero-bio">
-      <div class="section-head">
-        <div>
-          <h2><span class="section-num-inline">01 /</span> About</h2>
-          <div class="section-accent-line" aria-hidden="true"></div>
-        </div>
-      </div>
-      <div class="media-card">
-        <p class="bio">Niharika (nee-ha-ree-kah) is a Johns Hopkins-trained public health professional who works at the intersection of data, systems, and relationships. At Montefiore Medicine, she manages 10+ outreach workstreams, works across clinical systems including EPIC, REDCap, and ePACES, and uses SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who enjoys translating data into actionable insights, presenting findings to stakeholders, and continuously growing both her technical and people-facing skills. She's especially drawn to work that turns population-level data into earlier, more targeted intervention, keeping patients healthier before a crisis point is reached.</p>
+      <div class="hero-bio">
+        <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
+        <p class="bio">Niharika is a Johns Hopkins-trained professional and a cross-cultural communicator who works at the intersection of data, systems, and relationships. Having moved seven times growing up, she learned early to read a room and build trust with people from any background, fast, a skill that now shows up in every stakeholder relationship she manages. At Montefiore Medicine, she runs 10+ outreach workstreams and works across clinical systems including EPIC, REDCap, and ePACES (the data and case-management platforms used to track patient care and eligibility, not unlike a CRM or case-tracking system in any industry), using SQL and Excel to automate parts of an eligibility workflow. Just as importantly, she builds strong relationships across the organization, from patients and community partners to program leadership, the same instinct that carries over to clients, accounts, and stakeholders in any field. She keeps herself closely attuned to developments in AI and looks for smart, practical ways to apply them, streamlining workflows and surfacing insights faster, so technology augments human judgment rather than replacing it. She's a quick learner who thrives on translating data into actionable insights, presenting findings to stakeholders, and growing both her technical and people-facing skills wherever that work takes her, healthcare, finance, or beyond.</p>
       </div>
     </div>
 
     <section id="experience">
-        <div class="section-head">
-          <div>
-            <h2><span class="section-num-inline">02 /</span> Selected Experience</h2>
-            <div class="section-accent-line" aria-hidden="true"></div>
-          </div>
-        </div>
-        <p class="lede">Building trust and driving results across healthcare operations, data, and outreach.</p>
+        <h2><span class="section-num-inline">02 /</span> Selected Experience</h2>
+        <p class="lede">Building trust and driving results across data, outreach, and client relationships, in healthcare and beyond.</p>
 
         <div class="role">
           <h3>Montefiore Medicine (BE-InCK NY), Project Analyst</h3>
           <time>Aug 2024 – Current</time>
-          <p>Manages 10+ concurrent outreach workstreams at once, tracking status and prioritizing daily across competing deadlines. Drives proactive member communication at scale, running outreach campaigns to hundreds of members per cycle and logging outcomes to keep records accurate and up to date. Operates multiple clinical data systems (EPaces, RedCap, EPIC) and uses SQL and Excel to help automate part of an eligibility verification workflow, minimizing manual lookup time. Segments and triages a caseload of at-risk members into three risk tiers, applying consistent criteria to target outreach where it matters most. Stays current on emerging AI tools and evaluates where they can be applied to sharpen these workflows further.</p>
+          <p>Manage a portfolio of 10+ concurrent outreach and account workstreams at once, prioritizing daily across competing deadlines, similar to running a full book of accounts. Run high-volume outreach campaigns to hundreds of members per cycle, treating every contact like a sales touchpoint: building trust, handling objections, and moving people toward enrollment. Operate multiple clinical data systems (EPaces, RedCap, EPIC, healthcare's version of a CRM or case-management platform) to track outreach and report results, comfortable ramping quickly on new systems the way a sales team ramps on a new CRM. Use SQL and Excel to help automate part of an eligibility verification workflow, cutting manual lookup time. Maintain and tier a caseload of at-risk members across three risk levels, similar to account segmentation, so the right level of outreach and follow-up happens at the right time. Stay current on emerging AI tools and evaluate where they can sharpen these workflows further.</p>
         </div>
 
         <div class="role">
           <h3>Yale School of Medicine, Pediatrics – Allergy/Immunology, Research Associate</h3>
           <time>2023</time>
-          <p>Analyzed and visualized clinical data using SAS and Epic Slicer/Dicer to develop research insights for publications.</p>
+          <p>Analyzed and visualized clinical data using SAS and Epic Slicer/Dicer, healthcare-specific analytics tools, to turn raw data into research insights for publication.</p>
         </div>
 
         <div class="role">
@@ -940,17 +680,12 @@
         <div class="role">
           <h3>Johns Hopkins Medical Institute, Division of Geriatric Psychiatry, Research Assistant</h3>
           <time>Oct 2020 – May 2021</time>
-          <p>Screened low-income geriatric patients regarding mental well-being and social context, gaining firsthand patient interaction experience.</p>
+          <p>Screened low-income geriatric patients regarding mental well-being and social context, gaining firsthand experience in client-facing interviews and needs assessment.</p>
         </div>
       </section>
 
       <section id="skills">
-        <div class="section-head">
-          <div>
-            <h2><span class="section-num-inline">03 /</span> Skills</h2>
-            <div class="section-accent-line" aria-hidden="true"></div>
-          </div>
-        </div>
+        <h2><span class="section-num-inline">03 /</span> Skills</h2>
         <p class="lede">A blend of technical systems, data tools, and relationship-building skills.</p>
 
         <div class="skills-grid">
@@ -960,7 +695,7 @@
           </div>
           <div class="skill">
             <h4>Healthcare Systems</h4>
-            <p>EPIC · REDCap · ePACES</p>
+            <p>EPIC · REDCap · ePACES (healthcare's CRM &amp; case-management equivalents)</p>
           </div>
           <div class="skill">
             <h4>AI &amp; Technology</h4>
@@ -978,114 +713,60 @@
       </section>
 
       <section id="projects">
-        <div class="section-head">
-          <div>
-            <h2><span class="section-num-inline">04 /</span> Selected Work</h2>
-            <div class="section-accent-line" aria-hidden="true"></div>
-          </div>
-        </div>
+        <h2><span class="section-num-inline">04 /</span> Selected Work</h2>
         <p class="lede">Selected work spanning data automation, research, and technology design.</p>
 
-        <div class="project-card">
-          <a class="project-thumb-link" href="hriday-poster.pdf" target="_blank" rel="noopener">
+        <div class="project">
+          <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
+          <time>Oct 2016 – Jun 2018</time>
+          <p>As a Research Apprentice in the Innovation Office at IBM Watson, Niharika designed and scoped HRIDAY, a predictive analytics tool for early cardiac risk detection, delivering real-time heart attack risk alerts as part of a competitive high school science research program.</p>
+          <a href="hriday-poster.pdf" target="_blank" rel="noopener">
             <img class="project-thumb" src="hriday-thumb.jpeg" alt="HRIDAY research poster thumbnail">
           </a>
-          <div class="project-body">
-            <p class="project-tag">Predictive Analytics · Healthcare · AI</p>
-            <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
-            <time>Oct 2016 – Jun 2018</time>
-            <dl class="project-meta">
-              <dt>The problem</dt>
-              <dd>Detect cardiac risk earlier</dd>
-              <dt>My role</dt>
-              <dd>Designed the predictive analytics use case</dd>
-              <dt>Outcome</dt>
-              <dd>Real-time risk alerts</dd>
-            </dl>
-            <p class="project-cta"><a href="hriday-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
-          </div>
+          <p class="project-cta"><a href="hriday-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
         </div>
 
-        <div class="project-card" style="margin-top: 22px;">
-          <a class="project-thumb-link" href="weill-cornell-poster.pdf" target="_blank" rel="noopener">
+        <div class="project" style="margin-top: 26px;">
+          <h3>Weill Cornell Medical College: Friedreich's Ataxia Research</h3>
+          <time>May 2016 – Aug 2018</time>
+          <p>As a Research Assistant at the Brain &amp; Mind Research Institute, Niharika contributed to published research on Friedreich's Ataxia as part of a competitive high school science research program, assisting with tissue harvesting, nerve fiber preparation for immunohistochemistry, statistical analysis, and qPCR and Western Blotting techniques.</p>
+          <a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">
             <img class="project-thumb" src="weill-cornell-thumb.jpeg" alt="Weill Cornell Friedreich's Ataxia research poster thumbnail">
           </a>
-          <div class="project-body">
-            <p class="project-tag">Neuroscience · Lab Research · Rare Disease</p>
-            <h3>Weill Cornell Medical College: Friedreich's Ataxia Research</h3>
-            <time>May 2016 – Aug 2018</time>
-            <dl class="project-meta">
-              <dt>The problem</dt>
-              <dd>Understand nerve fiber degeneration in Friedreich's Ataxia</dd>
-              <dt>My role</dt>
-              <dd>Assisted tissue harvesting, nerve fiber prep, and qPCR/Western blot analysis</dd>
-              <dt>Outcome</dt>
-              <dd>Contributed to published research findings</dd>
-            </dl>
-            <p class="project-cta"><a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
-          </div>
+          <p class="project-cta"><a href="weill-cornell-poster.pdf" target="_blank" rel="noopener">View Poster →</a></p>
         </div>
       </section>
 
       <section id="hobbies">
         <h2>Outside of Work</h2>
         <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her Arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
-        <div class="media-card">
-          <div class="dance-gallery">
-            <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-            <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-            <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-          </div>
-          <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
-          <div class="painting-row">
-            <img src="painting-nyc.jpeg" alt="NYC skyline painting by Niharika" loading="lazy">
-            <img src="painting-elephant.jpeg" alt="Patterned African elephant painting by Niharika" loading="lazy">
-          </div>
+        <div class="dance-gallery">
+          <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
         </div>
+        <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
       </section>
 
       <section id="resume">
-        <div class="media-card">
-          <h2>Want the full story?</h2>
-          <p class="resume-cta"><a href="resume.html">View Niharika's Résumé →</a></p>
-          <p class="form-note">Password protected résumé, available on request.</p>
-        </div>
+        <h2>Want the full story?</h2>
+        <p class="resume-cta"><a href="resume.html">Go to her résumé →</a></p>
+        <p class="form-note">Password protected résumé, available on request.</p>
       </section>
 
       <section id="contact">
-        <div class="section-head">
-          <div>
-            <h2><span class="section-num-inline">05 /</span> Let's Connect!</h2>
-            <div class="section-accent-line" aria-hidden="true"></div>
-          </div>
-        </div>
+        <h2><span class="section-num-inline">05 /</span> Let's Connect!</h2>
         <p class="lede">Have an opportunity or question? Niharika would love to hear from you.</p>
-        <div class="media-card">
         <form id="contact-form">
           <input type="text" id="subject" placeholder="Subject Line" required>
           <textarea id="message" placeholder="Message" required></textarea>
-          <div class="contact-actions">
-            <button type="submit" class="btn">Get In Touch →</button>
-            <a class="linkedin" href="https://www.linkedin.com/in/niharika-desiraju/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
-              </svg>
-              <span class="ext-badge" aria-hidden="true">
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 17L17 7"/>
-                  <path d="M8 7h9v9"/>
-                </svg>
-              </span>
-            </a>
-          </div>
+          <button type="submit" class="btn">Get In Touch →</button>
         </form>
-        </div>
         <p class="form-note">This opens your email app with the message pre-filled, sent to her email.</p>
       </section>
 
       <footer>© 2026 Niharika Desiraju</footer>
 
-  </div>
   </div>
 </div>
 
