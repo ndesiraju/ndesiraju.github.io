@@ -68,7 +68,6 @@
     background: var(--panel-bg);
     border-radius: 18px;
     box-shadow: var(--card-shadow);
-    overflow: hidden;
     padding: 44px 48px 48px;
   }
 
@@ -79,6 +78,10 @@
     margin-bottom: 28px;
     padding: 20px 0;
     border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--panel-bg);
   }
 
   .site-nav a{
