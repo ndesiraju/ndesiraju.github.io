@@ -299,8 +299,19 @@
 
   .linkedin:hover{ background: #004182; }
 
+  .content-card{
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+  }
+
   .role{
-    margin-bottom: 28px;
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
   }
 
   .role:last-child{ margin-bottom: 0; }
@@ -331,8 +342,15 @@
   .skills-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 26px 32px;
+    gap: 18px 20px;
     margin-top: 8px;
+  }
+
+  .skill{
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
   }
 
   .skill h4{
@@ -385,6 +403,32 @@
     border-radius: 8px;
     border: 1px solid var(--line);
     display: block;
+  }
+
+  .painting-row{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    max-width: 480px;
+  }
+
+  .painting-row img{
+    height: 220px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+
+  .project{
+    background: var(--page-bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 26px;
   }
 
   .project h3{
@@ -552,6 +596,11 @@
       flex-shrink: 0;
     }
     .skills-grid{ grid-template-columns: 1fr; }
+    .content-card{ padding: 20px; }
+    .role{ padding: 18px 18px; }
+    .project{ padding: 18px 18px; }
+    .painting-row{ gap: 10px; }
+    .painting-row img{ height: 110px; }
   }
 
   /* Medium-subtle editorial paper grain */
@@ -643,18 +692,20 @@
       </div>
       <div class="hero-bio">
         <h2 style="margin-top: 32px;"><span class="section-num-inline">01 /</span> About</h2>
-        <p class="bio">Niharika (nee-hah-ree-kah) is a Johns Hopkins-trained professional who works at the intersection of data, systems, and relationships. Having moved seven times growing up, residing across the East and West Coast of the US, India, and Singapore, she learned to read a room and build trust with people from any background, a skill that now shows up in every stakeholder relationship she manages. At Montefiore Medicine, she runs 10+ concurrent workstreams and works across clinical systems including EPIC, REDCap, and ePACES (healthcare's version of a CRM). Just as importantly, she has built strong relationships across the organization, from community partners to program leadership. She keeps herself abreast of developments in AI and looks for smart, practical ways to apply them, like in streamlining workflows and surfacing insights faster, so technology can enhance human judgment rather than replacing it. She's an efficient learner who thrives on translating data into actionable insights, presenting findings to stakeholders, and growing both her technical and people-facing skills wherever that work takes her.</p>
+        <div class="content-card">
+          <p class="bio">Niharika (nee-hah-ree-kah) is a Johns Hopkins-trained professional who works at the intersection of data, systems, and relationships. Having moved seven times growing up, residing across the East and West Coast of the US, India, and Singapore, she learned to read a room and build trust with people from any background, a skill that now shows up in every stakeholder relationship she manages. At Montefiore Medicine, she runs 10+ concurrent workstreams and works across clinical systems including EPIC, REDCap, and ePACES (healthcare's version of a CRM). Just as importantly, she has built strong relationships across the organization, from community partners to program leadership. She keeps herself abreast of developments in AI and looks for smart, practical ways to apply them, like in streamlining workflows and surfacing insights faster, so technology can enhance human judgment rather than replacing it. She's an efficient learner who thrives on translating data into actionable insights, presenting findings to stakeholders, and growing both her technical and people-facing skills wherever that work takes her.</p>
+        </div>
       </div>
     </div>
 
     <section id="experience">
         <h2><span class="section-num-inline">02 /</span> Selected Experience</h2>
-        <p class="lede">Building trust and driving results across data, outreach, and client relationships, in healthcare and beyond.</p>
+        <p class="lede">Building trust and driving results across data, outreach, and client relationships — healthcare and beyond.</p>
 
         <div class="role">
           <h3>Montefiore Medicine (BE-InCK NY), Project Analyst</h3>
           <time>Aug 2024 – Current</time>
-          <p>Manage a portfolio of 10+ concurrent outreach and account workstreams at once, prioritizing daily across competing deadlines, similar to running a full book of accounts. Run high-volume outreach campaigns to hundreds of members per cycle, treating every contact like a sales touchpoint: building trust, handling objections, and moving people toward enrollment. Operate multiple clinical data systems (EPaces, RedCap, EPIC, healthcare's version of a CRM or case-management platform) to track outreach and report results, comfortable ramping quickly on new systems the way a sales team ramps on a new CRM. Use SQL and Excel to help automate part of an eligibility verification workflow, cutting manual lookup time. Maintain and tier a caseload of at-risk members across three risk levels, similar to account segmentation, so the right level of outreach and follow-up happens at the right time. Stay current on emerging AI tools and evaluate where they can sharpen these workflows further.</p>
+          <p>Manage a portfolio of 10+ concurrent outreach and account workstreams at once, prioritizing daily across competing deadlines, similar to running a full book of accounts. Run high-volume outreach campaigns to hundreds of members per cycle, treating every contact like a sales touchpoint: building trust, handling objections, and moving people toward enrollment. Operate multiple clinical data systems (EPaces, RedCap, EPIC — like a CRM or case-management platform) to track outreach and report results, comfortable ramping quickly on new systems. Use SQL and Excel to help automate part of an eligibility verification workflow, cutting manual lookup time. Maintain and tier a caseload of at-risk members across three risk levels, similar to account segmentation, so the right level of outreach and follow-up happens at the right time. Stay current on emerging AI tools and evaluate where they can sharpen these workflows further.</p>
         </div>
 
         <div class="role">
@@ -718,7 +769,7 @@
 
       <section id="projects">
         <h2><span class="section-num-inline">04 /</span> Selected Work</h2>
-        <p class="lede">Selected work spanning data automation, research, and technology design.</p>
+        <p class="lede">Selected work spanning data automation, research, and&nbsp;technology&nbsp;design.</p>
 
         <div class="project">
           <h3>HRIDAY: Real-Time Heart Attack Alert App Use Case</h3>
@@ -744,29 +795,39 @@
       <section id="hobbies">
         <h2>Outside of Work</h2>
         <p class="lede">Niharika is an avid painter and a classically trained Bharatanatyam dancer of over ten years, culminating in her Arangetram in 2018. Both practices continue to shape how she approaches her work: with patience, precision, and an eye for detail.</p>
-        <div class="dance-gallery">
-          <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-          <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
-          <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+        <div class="content-card">
+          <div class="dance-gallery">
+            <img src="dance-1.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+            <img src="dance-2.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+            <img src="dance-3.jpeg" alt="Niharika performing Bharatanatyam" loading="lazy">
+          </div>
+          <div class="painting-row">
+            <img src="painting-nyc.jpeg" alt="Painting by Niharika of the NYC skyline" loading="lazy">
+            <img src="painting-elephant.jpeg" alt="Painting by Niharika of an elephant" loading="lazy">
+          </div>
+          <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
         </div>
-        <p class="project-cta"><a href="https://drive.google.com/drive/folders/17C9Rh2cP2R3H67mcsblDtDsnbbsk5AXv" target="_blank" rel="noopener" style="font-size: 17px;">View Painting Portfolio <svg class="inline-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a></p>
       </section>
 
       <section id="resume">
         <h2>Want the full story?</h2>
-        <p class="resume-cta"><a href="resume.html">Go to her résumé →</a></p>
-        <p class="form-note">Password protected résumé, available on request.</p>
+        <div class="content-card">
+          <p class="resume-cta"><a href="resume.html">Go to her résumé →</a></p>
+          <p class="form-note">Password protected résumé, available on request.</p>
+        </div>
       </section>
 
       <section id="contact">
         <h2><span class="section-num-inline">05 /</span> Let's Connect!</h2>
         <p class="lede">Have an opportunity or question? Niharika would love to hear from you.</p>
-        <form id="contact-form">
-          <input type="text" id="subject" placeholder="Subject Line" required>
-          <textarea id="message" placeholder="Message" required></textarea>
-          <button type="submit" class="btn">Get In Touch →</button>
-        </form>
-        <p class="form-note">This opens your email app with the message pre-filled, sent to her email.</p>
+        <div class="content-card">
+          <form id="contact-form">
+            <input type="text" id="subject" placeholder="Subject Line" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Get In Touch →</button>
+          </form>
+          <p class="form-note">This opens your email app with the message pre-filled, sent to her email.</p>
+        </div>
       </section>
 
       <footer>© 2026 Niharika Desiraju</footer>
